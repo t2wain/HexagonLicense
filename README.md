@@ -10,8 +10,8 @@ It is important to keep these information a secret to prevent unauthorize access
 
 The web service public endpoints are:
 
-- API Server: https://ppm-licensingportalapi-prod.hexagonsmartlicensing.com
-- Identity Server: https://identityserver.hexagonppm.com
+- API Server: `https://ppm-licensingportalapi-prod.hexagonsmartlicensing.com`
+- Identity Server: `https://identityserver.hexagonppm.com`
 
 ## Get an Access Token from Identity Server
 
@@ -21,13 +21,18 @@ The first step is to request an access token from the Identity server. The acces
 
 OData is a standard HTTP protocol similar to the REST web service architecture. The metadata for the web service can be found from this standard URL:
 
-- Metadata info: https://ppm-licensingportalapi-prod.hexagonsmartlicensing.com/$metadata
+- Metadata info: <a href="https://ppm-licensingportalapi-prod.hexagonsmartlicensing.com/$metadata" target="_blank">https://ppm-licensingportalapi-prod.hexagonsmartlicensing.com/$metadata</a>
 
-There are many tools available to parse the OData metadata and generate the necessary client codes for use in your application. The codes include the OData proxy client and all the classes for use in serializing/deserializing the web request/resonse JSON data.
+There are many tools available to parse the OData metadata and generate the necessary client codes for use in your application. The codes include the OData proxy client and all the classes for use in serializing/deserializing the web request/response JSON data.
 
 ## Get Data from the API Server
 
-All call to the web service are HTTP calls to specific URLs. You can assemble these URLs manually and use a web client ( like Postman ) to call the API server. The URL format is well-defined as specified in the OData standards. The web rresponse data is in JSON format. When using the generated OData proxy client, the client will assemble the URL for you and serialize/deserialize all the data to/from JSON data format. Typically, you will want to save these data to a database for analysis.
+All call to the web service are HTTP calls to specific URLs. You can assemble these URLs manually and use a web client ( like Postman ) to call the API server. The URL format is well-defined as specified in the OData standards. The web response data is in JSON format. When using the generated OData proxy client, the client will assemble the URL for you and serialize/deserialize all the data to/from JSON data format.
+
+ Typically, you will want to save these data to a database for analysis. Examples of data analysis could be like these:
+
+- <a href="https://t2wain.github.io/tan-chartjs/" target="_blank">Stack bar chart</a> showing hourly peak license usage level (available, in-use, expired)
+- <a href="https://t2wain.github.io/tan-datatable/" target="_blank">Data table</a> showing detail license usage by users
 
 ## Benefits of Analyzing Usage Data
 
@@ -40,7 +45,7 @@ Intergraph has a very diverse licensing options:
 - Multiple different software will require different licenses
 - A software can have multiple modules and each module might require different licenses
 
-Analyzing the license usage information will allow each software administator to perform the following for his software:
+Analyzing the license usage information will allow each software administrator to perform the following for his software:
 
 - Lease licenses based on past level of usage that typically corresponds to cyclical work loads
 - Monitor license usage in real-time (which software, who is using it, from which computer, and for how long)
